@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import dummy_weather from "./weather";
+import "./App.css";
 
 function App() {
+  console.log(dummy_weather.weater);
+  //definindo o ID no final garante que mais  a baixo as informacoes sejam mostradas
+  const find = dummy_weather.weater.find(item => item.id === 1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="App">
+        <div className="AppBar">
+          <img src={null} className="App-logo" alt="logo" />
+          <h4 className="bar-name">super-app</h4>
+        </div>
+        <div className="weather-app">
+          <div className="weather-bar">
+            <h5>Weater</h5>
+            {/* find definido antes do código */}
+            <div className="weather-id">{find.id}</div>
+            <div className="weather-date">{find.date}</div>
+            <div className="weather-img">{find.img}</div>
+            <div className="weather-temperatura">{find.temperatura}</div>
+          </div>
+        </div>
+
+        {/* {dummy_weather.weater.map(item => (
+        <div className='weather-bar'>{item.date}</div>
+        ))} */}
+      </div>
+    </Fragment>
   );
 }
 

@@ -1,38 +1,62 @@
 .App {
+  /*text-align: center;*/
+  display: grid;
+  grid-template-areas:
+  "bar content"
+  "bar content"
+  "bar content"
+  "bar content"
+  ;
+}
+
+.AppBar {
+  grid-area: bar;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 25vw;
   display: flex;
   flex-direction: column;
+  font-size: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.AppBar :first-child { /*aka .App-Logo*/
+  height: 10vmin;
+  border: 1px solid dodgerblue;
+  max-width: 30px;
+  max-height: 30px;
+  margin-top: 50px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AppBar a{
+  border: 1px solid red;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 10px;
+}
+.weather-app{
+  grid-area: content;
+  border: 1px solid gray;
+  background-color: royalblue;
+  width: 75vw;
+  height: 20%;
+}
+.weather-bar{
+  display: flex;
+  flex-direction: row;
+}
+.weather-id{
+  display: block;
+}
+.weather-id{
+  display: block;
+}
+.weather-date{
+  /**/
+}
+.weather-img{
+  /**/
+}
+.weather-temperatura{
+  /**/
 }
