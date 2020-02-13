@@ -1,0 +1,45 @@
+.weather-app {
+  grid-area: content;
+  border: 1px solid gray;
+  background-color: royalblue;
+  width: 75vw;
+  height: 20%;
+  text-align: center;
+}
+.weather-bar {
+  display: flex;
+  flex-direction: row;
+}
+.weater-bar-box {
+  /**/
+  margin-left: 20px;
+}
+.weather-id {
+  display: block;
+}
+.weather-date {
+  /**/
+}
+.weather-img {
+  /**/
+  width: 35px;
+  height: 35px;
+  border: 0.5px dotted black;
+  margin: 10px;
+  margin-left: 25px;
+}
+.weather-temperatura {
+  /**/
+}
+.temp-align {
+  display: flex;
+}
+.temp-align div {
+  margin-left: 8px;
+}
+.temp-align * {
+  color: red;
+}
+.temp-align div + div {
+  color: lightskyblue;
+}

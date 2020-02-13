@@ -6,25 +6,25 @@ const dummy_weather = {
       id: 1, //necessário identificar outros itens
       img: "", //get image acording to situation (Sun/Rain)
       date: "segunda",
-      temperatura: [50, 30, 20] //temperatura max/med/min também em um array
+      temperatura: [30, 20] //temperatura max/min também em um array
     }, //vírgula para criar mais de um
     {
       id: 2,
       img: "",
       date: "terça",
-      temperatura: [50, 30, 20]
+      temperatura: [30, 20]
     },
     {
       id: 3,
       img: "",
       date: "quarta",
-      temperatura: [50, 30, 20]
+      temperatura: [30, 20]
     },
     {
       id: 4,
       img: "",
       date: "quinta",
-      temperatura: [50, 30, 20]
+      temperatura: [30, 20]
     }
   ]
 };
