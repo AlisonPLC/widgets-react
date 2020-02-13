@@ -37,7 +37,7 @@ function App() {
           </div>
         </div>
         {/*metronome*/}
-
+        <Metronome />
         {/* {dummy_weather.weater.map(item => (
         <div className='weather-bar'>{item.date}</div>
         ))} */}
