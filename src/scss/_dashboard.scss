@@ -2,10 +2,10 @@
   /*text-align: center;*/
   display: grid;
   grid-template-areas:
-    "bar content"
-    "bar content"
-    "bar content"
-    "bar content";
+    "bar weather"
+    "bar weather"
+    "bar metronome"
+    "bar mertonome";
 }
 
 .AppBar {

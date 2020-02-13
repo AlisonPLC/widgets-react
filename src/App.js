@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import dummy_weather from "./weather";
 import "./scss/main.scss";
+import Metronome from "./metronome";
 import "./App.css";
 
 function App() {
@@ -10,12 +11,11 @@ function App() {
   const weater_2 = dummy_weather.weater.find(item => item.id === 2);
   const weater_3 = dummy_weather.weater.find(item => item.id === 3);
   const weater_4 = dummy_weather.weater.find(item => item.id === 4);
-  //variables for metronome
-  let bpm = 100;
-  let playing = false;
 
   return (
     <Fragment>
+      {/*lovely metronome parts */}
+
       <div className="App">
         <div className="AppBar">
           <img src={null} className="App-logo" alt="logo" />
@@ -37,16 +37,6 @@ function App() {
           </div>
         </div>
         {/*metronome*/}
-        <div className="metronome">
-          <div className="bpmSlider">
-            <div>
-              {bpm}
-              BPM
-              <imput type="range" min="60" max="240" value={bpm} />
-            </div>
-            <button>{playing ? "Stop" : "Start"}</button>
-          </div>
-        </div>
 
         {/* {dummy_weather.weater.map(item => (
         <div className='weather-bar'>{item.date}</div>
