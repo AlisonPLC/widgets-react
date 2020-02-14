@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import dummy_weather from "./weather";
 import "./scss/main.scss";
 import Metronome from "./metronome";
+import SocialCard from "./socialCard";
 import "./App.css";
 
 function App() {
@@ -36,11 +37,14 @@ function App() {
             </div>
           </div>
         </div>
-        {/*metronome*/}
-        <Metronome />
         {/* {dummy_weather.weater.map(item => (
         <div className='weather-bar'>{item.date}</div>
         ))} */}
+        {/*metronome*/}
+        <Metronome />
+        {/*social card */}
+
+        <SocialCard />
       </div>
     </Fragment>
   );
