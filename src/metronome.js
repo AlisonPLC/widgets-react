@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./scss/main.scss";
 import click1 from "./Audio/click1.wav";
-import click2 from "./Audio/click2.wav";
 
 const Metronome = () => {
   const [play, setPlay] = useState(false);
-  const bpm = 100;
+  const [bpm, setBpm] = useState(100);
+  let timer = null;
 
   const audio = new Audio(click1);
 
@@ -15,13 +15,21 @@ const Metronome = () => {
   }
 
   const activatesound = () => {
-    if (play == false) {
-      clearInterval();
-      return;
-    }
+    //bug: começa a tocar apenas após cliscar 2 vezes no botão Start, fazendo assim que fique desalinhado com o que diz o botão
+    console.log("PLay is: " + play);
+
     setPlay(!play);
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    setInterval(tick, { bpm });
+
+    if (play == true) {
+      console.log("BPM ON CLICK IS: " + { bpm });
+      timer = setInterval(tick, (60 / { bpm }) * 1000);
+
+      return console.log("activatesound Terminou!");
+    } else {
+      clearInterval(timer);
+
+      return console.log("activatesound Terminou FALSE");
+    }
   };
 
   return (
@@ -34,8 +42,8 @@ const Metronome = () => {
           max="240"
           id="bpmPlayer"
           onChange={e => {
-            console.log(e.target.value);
-            bpm = e.target.value;
+            //console.log(e.target.value);
+            setBpm(e.target.value);
             console.log("BPM IS: " + bpm);
           }}
         />
