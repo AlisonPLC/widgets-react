@@ -3,6 +3,9 @@ import dummy_weather from "./weather";
 import "./scss/main.scss";
 import Metronome from "./metronome";
 import SocialCard from "./socialCard";
+
+import WebFont from "webfontloader";
+
 import "./App.css";
 
 function App() {
