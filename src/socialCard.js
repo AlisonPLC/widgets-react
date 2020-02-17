@@ -5,6 +5,8 @@ import dev from "./Images/dev.svg";
 import WebFont from "webfontloader";
 import UserIcon from "./Images/UserIcon.png";
 
+
+
 WebFont.load({
   google: {
     families: ["Asap Web:300,400,700", "sans-serif"]
@@ -23,6 +25,7 @@ const SocialCard = () => {
         <div className="person-Icon-Container">
 
         <img classname="person-Icon" src={UserIcon} alt="Dave Ceddia" />
+    
         </div>
         
       </div>

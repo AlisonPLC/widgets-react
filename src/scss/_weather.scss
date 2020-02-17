@@ -1,9 +1,7 @@
 .weather-app {
   grid-area: weather;
-  border: 1px solid gray;
-  background-color: royalblue;
+  border: 1px dotted black;
   width: 75vw;
-  height: 20vh;
   text-align: center;
 }
 .weather-bar {
@@ -12,24 +10,37 @@
 }
 .weater-bar-box {
   /**/
+  width: 98px;
+  height: 77px;
   margin-left: 20px;
+  background-color: $pinky-collor;
+  box-shadow: 0px 6px 8px $pinky-shadow;
+  border-radius: 20px;
+  
+}
+.weater-bar-box + .weater-bar-box{
+  margin-left: 21px;
 }
 .weather-id {
   display: block;
 }
 .weather-date {
   /**/
+  color: white;
+  font-size: 9px;
+  margin-top: 3px;
+  margin-bottom: 10px;
 }
 .weather-img {
   /**/
-  width: 35px;
-  height: 35px;
-  border: 0.5px dotted black;
-  margin: 10px;
-  margin-left: 25px;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+ 
 }
 .weather-temperatura {
   /**/
+  margin-bottom: 9px;
 }
 .temp-align {
   display: flex;
@@ -37,9 +48,7 @@
 .temp-align div {
   margin-left: 8px;
 }
-.temp-align * {
-  color: red;
-}
-.temp-align div + div {
-  color: lightskyblue;
+.temp-align div {
+  color: white;
+  margin: auto;
 }
