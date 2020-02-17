@@ -2,15 +2,27 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./scss/main.scss";
 import currencySwap from "./Images/currencySwap.svg";
+import dummy_dolar from "./CalculatorFetch";
 
 const Calculator = () => {
+  const dolarConst = dummy_dolar.USD.find(item => item.id === 1);
+
+  const [endResult, setEndResult] = useState(undefined);
+  const ChangeValue = userInput => {
+    setEndResult(parseInt(userInput.target.value) * dolarConst.high);
+    console.log(endResult);
+  };
+
   return (
     <div className="calculator-box">
       <div className="upper-area">
-        <div className="input-user">{/*USER InPUT */}1</div>
+        <div>
+          {/*USER InPUT */}
+          <input className="input-user" type="text" onChange={ChangeValue} />
+        </div>
         <div className="currency-user">
           {/*USER currency */}
-          dollar
+          {dolarConst.code}
         </div>
       </div>
 
@@ -21,11 +33,11 @@ const Calculator = () => {
       <div className="lower-area">
         <div className="output-user">
           {/*USER output */}
-          <h5>4.31</h5>
+          {endResult}
         </div>
         <div className="currency-target">
           {/*USER's desired currency */}
-          reais
+          {dolarConst.codein}
         </div>
       </div>
     </div>

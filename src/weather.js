@@ -1,5 +1,4 @@
-
-//testing this 
+//testing this
 import Rainy from "./Images/Rainy.svg";
 import Sunny from "./Images/Sunny.svg";
 import Clowdy from "./Images/Clowdy.svg";

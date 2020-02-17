@@ -1,70 +1,66 @@
-.calculator-box{
-    /**/
-    background-color: $pinky-collor;
-    height: 130px;
-    width: 375px;
-    box-shadow: 0px 3px 20px $shadow-color;
-    border-radius: 20px;
-    border: 60px;
-    display: flex;
-    flex-direction: column;
+.calculator-box {
+  /**/
+  background-color: $pinky-collor;
+  height: 130px;
+  width: 375px;
+  box-shadow: 0px 3px 20px $shadow-color;
+  border-radius: 20px;
+  border: 60px;
+  display: flex;
+  flex-direction: column;
 }
-.upper-area{
-    /**/
-    display: flex;
-    flex-direction: row;
+.upper-area {
+  /**/
+  display: flex;
+  flex-direction: row;
 }
-.input-user{
-    background-color: white;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 19px;
-    margin-right: 86px;
-    text-align: center;
-}
-.currency-user{
-    background-color: white;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    margin-top: 19px;
-    text-align: center;
-}
-.currencySwapContainer{
-    max-height: 20px;
-    max-width: 20px;
-}
-.currencySwap{
-    transform: rotate(90deg);
-    float: right;
-    margin-right: 129px;
-}
-.lower-area{
-    /**/
-    display: flex;
-    flex-direction: row;
+.input-user {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-top: 19px;
+  margin-right: 86px;
+  text-align: center;
 
+  outline: none;
 }
-.output-user{
-    background-color: white;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-right: 86px
-    
+
+.currency-user {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  margin-top: 19px;
+  text-align: center;
 }
-.output-user h5{
-    /*GAMBIARRA QUE DEVE SER REMOVIDA*/
-    text-align: center;
-    margin: auto;
+.currencySwapContainer {
+  max-height: 20px;
+  max-width: 20px;
 }
-.currency-target{
-    background-color: white;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    text-align: center;
+.currencySwap {
+  transform: rotate(90deg);
+  float: right;
+  margin-right: 129px;
+}
+.lower-area {
+  /**/
+  display: flex;
+  flex-direction: row;
+}
+.output-user {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 86px;
+}
+.currency-target {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  text-align: center;
 }
