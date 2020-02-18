@@ -4,10 +4,13 @@ import "./scss/main.scss";
 import Metronome from "./metronome";
 import SocialCard from "./socialCard";
 import Calculator from "./Calculator";
+import hackerNews from "./hackerNews";
+import GitIssues from "./GitIssues";
 
 import WebFont from "webfontloader";
 
 import "./App.css";
+import HackerNews from "./hackerNews";
 
 function App() {
   console.log(dummy_weather.weater);
@@ -123,13 +126,21 @@ function App() {
         {/* {dummy_weather.weater.map(item => (
         <div className='weather-bar'>{item.date}</div>
         ))} */}
+
         {/*metronome*/}
         <Metronome />
-        {/*social card */}
 
+        {/*social card */}
         <SocialCard />
+
         {/*Currency calculator*/}
         <Calculator />
+
+        {/*hacker news*/}
+        <HackerNews />
+
+        {/*GIT ISSUES*/}
+        <GitIssues />
       </div>
     </Fragment>
   );

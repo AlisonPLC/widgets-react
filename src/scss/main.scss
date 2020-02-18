@@ -4,7 +4,10 @@
 @import "_metonome.scss";
 @import "_socialcard.scss";
 @import "_calculator.scss";
+@import "_hackernews.scss";
+@import "_gitIssues.scss";
 
 * {
   font-family: "Asap", sans-serif;
+  color: $words-collor;
 }
