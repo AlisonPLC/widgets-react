@@ -7,10 +7,35 @@ import dummy_dolar from "./CalculatorFetch";
 const Calculator = () => {
   const dolarConst = dummy_dolar.USD.find(item => item.id === 1);
 
-  const [endResult, setEndResult] = useState(undefined);
+  const [endResult, setEndResult] = useState(dolarConst.high);
+  const [swap, setSwap] = useState(false);
+  const [currency01, setCurrency01] = useState(dolarConst.code);
+  const [currency02, setCurrency02] = useState(dolarConst.codein);
   const ChangeValue = userInput => {
-    setEndResult(parseInt(userInput.target.value) * dolarConst.high);
+    //make it recognize invalid numbers
+    /* if (!isNaN(userInput)) {
+      setEndResult(0);
+      console.log("Return");
+      return;
+    }*/
+    swap == true
+      ? setEndResult("R$" + parseInt(userInput.target.value) * dolarConst.high)
+      : setEndResult("R$" + parseInt(userInput.target.value) * dolarConst.high);
+
     console.log(endResult);
+  };
+  const SwapItUp = () => {
+    setSwap(!swap);
+    console.log("current state is: " + swap);
+    if (swap == true) {
+      console.log("it is true");
+      setCurrency01(dolarConst.codein);
+      setCurrency02(dolarConst.code);
+    } else {
+      console.log("it is false");
+      setCurrency02(dolarConst.codein);
+      setCurrency01(dolarConst.code);
+    }
   };
 
   return (
@@ -18,16 +43,27 @@ const Calculator = () => {
       <div className="upper-area">
         <div>
           {/*USER InPUT */}
-          <input className="input-user" type="text" onChange={ChangeValue} />
+          <input
+            maxlength="7"
+            className="input-user"
+            type="text"
+            onChange={ChangeValue}
+            placeholder=" 1"
+          />
         </div>
         <div className="currency-user">
           {/*USER currency */}
-          {dolarConst.code}
+          {currency01}
         </div>
       </div>
 
       <div className="currencySwap-Container">
-        <img className="currencySwap" src={currencySwap} alt="currencySwap" />
+        <img
+          className="currencySwap"
+          src={currencySwap}
+          alt="currencySwap"
+          onClick={SwapItUp}
+        />
       </div>
 
       <div className="lower-area">
@@ -37,7 +73,7 @@ const Calculator = () => {
         </div>
         <div className="currency-target">
           {/*USER's desired currency */}
-          {dolarConst.codein}
+          {currency02}
         </div>
       </div>
     </div>
